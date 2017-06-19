@@ -1,0 +1,183 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons left>
+        <button ion-button icon-only (click)="openMenu('main')">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>
+      Mes commandes
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="openMenu('user')">
+            <ion-icon name="apps"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding id="page3">
+  <h3>Mes commandes</h3>
+  <!--
+  <ion-list id="restaurantLibanais-list7">
+    <ion-item-divider color="red">Aujourd'hui</ion-item-divider>
+    <ion-item-sliding color="none" id="restaurantLibanais-list-item27">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img />
+        </ion-thumbnail>
+        <h2>Finn</h2>
+        <h3>Don't Know What To Do!</h3>
+        <p>I've had a pretty messed up day. If we just...</p>
+      </ion-item>
+
+
+      <ion-item-options side="left">
+        <button ion-button color="primary">
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="mail"></ion-icon>
+          Email
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding color="none" id="restaurantLibanais-list-item27">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img />
+        </ion-thumbnail>
+        <h2>Finn</h2>
+        <h3>Don't Know What To Do!</h3>
+        <p>I've had a pretty messed up day. If we just...</p>
+      </ion-item>
+
+
+      <ion-item-options side="left">
+        <button ion-button color="primary">
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="mail"></ion-icon>
+          Email
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-divider color="red">Hier</ion-item-divider>
+    <ion-item-sliding color="none" id="restaurantLibanais-list-item27">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img />
+        </ion-thumbnail>
+        <h2>Finn</h2>
+        <h3>Don't Know What To Do!</h3>
+        <p>I've had a pretty messed up day. If we just...</p>
+      </ion-item>
+
+
+      <ion-item-options side="left">
+        <button ion-button color="primary">
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="mail"></ion-icon>
+          Email
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  <ion-item-divider color="light">A</ion-item-divider>
+  <ion-item-sliding color="none" id="restaurantLibanais-list-item27">
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img />
+    </ion-thumbnail>
+    <h2>Finn</h2>
+    <h3>Don't Know What To Do!</h3>
+    <p>I've had a pretty messed up day. If we just...</p>
+  </ion-item>
+
+
+  <ion-item-options side="left">
+    <button ion-button color="primary">
+      <ion-icon name="text"></ion-icon>
+      Text
+    </button>
+    <button ion-button color="secondary">
+      <ion-icon name="call"></ion-icon>
+      Call
+    </button>
+  </ion-item-options>
+  <ion-item-options side="right">
+    <button ion-button color="primary">
+      <ion-icon name="mail"></ion-icon>
+      Email
+    </button>
+  </ion-item-options>
+  </ion-item-sliding>
+  <ion-item-sliding color="none" id="restaurantLibanais-list-item27">
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img />
+    </ion-thumbnail>
+    <h2>Finn</h2>
+    <h3>Don't Know What To Do!</h3>
+    <p>I've had a pretty messed up day. If we just...</p>
+  </ion-item>
+
+
+  <ion-item-options side="left">
+    <button ion-button color="primary">
+      <ion-icon name="text"></ion-icon>
+      Text
+    </button>
+    <button ion-button color="secondary">
+      <ion-icon name="call"></ion-icon>
+      Call
+    </button>
+  </ion-item-options>
+  <ion-item-options side="right">
+    <button ion-button color="primary">
+      <ion-icon name="mail"></ion-icon>
+      Email
+    </button>
+  </ion-item-options>
+  </ion-item-sliding>
+  </ion-list>
+-->
+
+<ion-list id="pizzeria-list4">
+  <div class="item-inner" *ngFor="let commande of commandes">
+
+
+  <ion-item color="none" id="pizzeria-list-item10"  *ngIf="commande.id_client == id">
+    <ion-avatar item-start>
+          <img src="assets/img/avatar.gif">
+        </ion-avatar>
+    <h2>{{commande.article}}</h2>
+    <h3>{{commande.montant}}</h3>
+    <p>{{commande.date}}</p>
+  </ion-item>
+  </div>
+</ion-list>
+
+</ion-content>

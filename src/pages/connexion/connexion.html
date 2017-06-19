@@ -1,0 +1,43 @@
+<ion-content padding id="page5">
+  <form id="connexion-form1" (submit)="doLogin()">
+    <div class="spacer" style="height:20px;" id="connexion-spacer2"></div>
+    <h1 id="connexion-heading1" style="color:#000000;text-align:center;">
+      Connexion
+    </h1>
+    <div class="spacer" style="height:30px;" id="connexion-spacer3"></div>
+    <div id="connexion-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Entrez vos informations de connexion
+      </p>
+    </div>
+    <div class="spacer" style="height:30px;" id="connexion-spacer4"></div>
+    <ion-list id="connexion-list1">
+      <ion-item id="connexion-input1">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" placeholder="" [(ngModel)]="loginData.username" name="username"></ion-input>
+      </ion-item>
+      <ion-item id="connexion-input2">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="password" placeholder="" [(ngModel)]="loginData.password" name="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-item id="connexion-checkbox1">
+      <ion-label>
+        Rester connecté?
+      </ion-label>
+      <ion-checkbox [(ngModel)]="loginData.connected" name="connected"></ion-checkbox>
+    </ion-item>
+    <div class="spacer" style="height:40px;" id="connexion-spacer1"></div>
+    <button id="connexion-button1" ion-button color="stable" block type="submit">
+      Connexion
+    </button>
+
+  </form>
+  <button id="connexion-button2" ion-button clear color="positive" block on-click="goToInscription()">
+    Ou créer un compte
+  </button>
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons left>
+        <button ion-button icon-only (click)="openMenu('main')">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title autocapitalize="on">
+      {{shop}}
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="openMenu('user')">
+            <ion-icon name="apps"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding id="page13">
+  <!--
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+
+
+    </ion-refresher-content>
+
+  </ion-refresher>
+-->
+<ion-list id="pizzeria-list4">
+  <div class="item-inner" *ngFor="let post of posts">
+
+
+  <ion-item color="none" id="pizzeria-list-item10"  *ngIf="post.categorie == shop" on-click="goToRestaurantDetail(post)">
+
+    <ion-thumbnail item-left>
+      <img [src]="'http://localhost:8000/uploads/'+post.image" />
+    </ion-thumbnail>
+    <h2>{{post.nom}}</h2>
+    <h3>{{post.phone}}</h3>
+    <p>{{post.email}}</p>
+  </ion-item>
+  </div>
+</ion-list>
+</ion-content>

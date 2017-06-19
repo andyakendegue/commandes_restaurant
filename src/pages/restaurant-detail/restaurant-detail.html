@@ -1,0 +1,33 @@
+<ion-header>
+  <!--
+  <ion-toolbar color="danger">
+    <ion-buttons left>
+        <button ion-button icon-only (click)="openMenu('main')">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>
+      Restaurant detail
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="openMenu('user')">
+            <ion-icon name="apps"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-toolbar>
+-->
+<ion-navbar color="danger">
+  <ion-title>{{nomRestaurant}}</ion-title>
+  <ion-buttons end>
+      <button ion-button icon-only (click)="openMenu('user')">
+          <ion-icon name="apps"></ion-icon>
+      </button>
+  </ion-buttons>
+
+</ion-navbar>
+</ion-header>
+<ion-tabs>
+    <ion-tab [root]="contactRoot" tabTitle="Contact" tabIcon="information-circle"></ion-tab>
+    <ion-tab [root]="menuRoot" tabTitle="Offre" tabIcon="information-circle"></ion-tab>
+    <ion-tab [root]="localisationRoot" tabTitle="Localisation" tabIcon="information-circle"></ion-tab>
+</ion-tabs>

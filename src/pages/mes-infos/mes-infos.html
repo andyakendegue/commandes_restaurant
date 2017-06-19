@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons left>
+        <button ion-button icon-only (click)="openMenu('main')">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>
+      Mes infos
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="openMenu('user')">
+            <ion-icon name="apps"></ion-icon>
+        </button>
+    </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding id="page2">
+  <ion-grid>
+  <ion-row>
+    <ion-col col-12>
+      <ion-item item-start>
+      <ion-avatar item-left>
+        <img src="assets/img/capp.jpg" />
+      </ion-avatar>
+      <h2>{{user.prenom}}</h2>
+      <p>{{user.nom}}</p>
+</ion-item>
+
+
+    </ion-col>
+
+    <ion-col col-12>
+
+      <ion-item id="menu-list-item-container3">
+        <div id="menu-markdown6" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            Sexe :
+            <strong>
+              {{user.sexe}}
+            </strong>
+          </p>
+        </div>
+      </ion-item>
+      <ion-item id="menu-list-item-container3">
+        <div id="menu-markdown6" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            Email :
+            <strong>
+              {{user.email}}
+            </strong>
+          </p>
+        </div>
+      </ion-item>
+      <ion-item id="menu-list-item-container3">
+        <div id="menu-markdown6" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            Téléphone :
+            <strong>
+              {{user.phone}}
+            </strong>
+          </p>
+        </div>
+      </ion-item>
+      <ion-item>
+        <button id="connexion-button1" ion-button color="stable" block on-click="modifierInfos()">
+          Modifier le profil
+        </button>
+
+      </ion-item>
+
+    </ion-col>
+
+  </ion-row>
+  </ion-grid>
+
+</ion-content>

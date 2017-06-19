@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<!--
+  <ion-slides>
+    <ion-slide>
+      <h1>Slide 1</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+
+  </ion-slides>
+
+
+<h3>Les meilleurs restaurants</h3>
+-->
+
+<ion-list id="pizzeria-list4">
+  <div class="item-inner" *ngFor="let post of posts">
+
+
+  <ion-item color="none" id="pizzeria-list-item10" on-click="goToRestaurantDetail(post)">
+
+    <ion-thumbnail item-left>
+      <img [src]="'http://localhost:8000/uploads/'+post.image" />
+    </ion-thumbnail>
+    <h2>{{post.nom}}</h2>
+    <h3>{{post.phone}}</h3>
+    <p>{{post.email}}</p>
+  </ion-item>
+  </div>
+</ion-list>
+
+
+
+</ion-content>

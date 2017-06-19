@@ -1,0 +1,82 @@
+<ion-content padding id="page6">
+  <div class="spacer" style="height:20px;" id="inscription-spacer5"></div>
+  <form id="inscription-form2" (submit)="doSignup()">
+    <h1 id="inscription-heading2" style="color:#000000;text-align:center;">
+      Inscription
+    </h1>
+    <div class="spacer" style="height:30px;" id="inscription-spacer6"></div>
+    <div id="inscription-markdown2" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Renseignez vos informations personnelles
+      </p>
+    </div>
+    <div class="spacer" style="height:30px;" id="inscription-spacer7"></div>
+    <ion-list id="inscription-list2">
+      <ion-item id="inscription-input3">
+        <ion-label>
+          Nom
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="regData.lastname" name="lastname"></ion-input>
+      </ion-item>
+      <ion-item id="inscription-input3">
+        <ion-label>
+          Prénom
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="regData.firstname" name="firstname"></ion-input>
+      </ion-item>
+      <ion-item id="inscription-input3">
+        <ion-label>
+          Téléphone
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="regData.phone" name="phone"></ion-input>
+      </ion-item>
+      <ion-item id="inscription-input4">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" placeholder="" [(ngModel)]="regData.email" name="email"></ion-input>
+      </ion-item>
+      <ion-item id="inscription-input3">
+        <ion-label>
+          Sexe
+        </ion-label>
+        <ion-select [(ngModel)]="regData.sexe" name="sexe">
+          <ion-option value="M" >Homme</ion-option>
+          <ion-option value="F" >Femme</ion-option>
+        </ion-select>
+      </ion-item>
+      <!--
+      <ion-item id="inscription-input3">
+        <ion-label>
+          Photo
+        </ion-label>
+        <ion-avatar  >
+          <img  />
+        </ion-avatar>
+      </ion-item>
+    -->
+      <ion-item id="inscription-input5">
+        <ion-label>
+          Mot de passe
+        </ion-label>
+        <ion-input type="password" placeholder="" [(ngModel)]="regData.password" name="password"></ion-input>
+      </ion-item>
+      <ion-item id="inscription-input5">
+        <ion-label>
+          Confirmer le mot de passe
+        </ion-label>
+        <ion-input type="password" placeholder="" [(ngModel)]="regData.confirmPassword" name="confirmPassword"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button id="inscription-button3" ion-button color="energized" block type="submit">
+      Inscription
+    </button>
+
+
+  </form>
+
+  <button id="connexion-button2" ion-button clear color="positive" block (click)="goToConnexion()">
+    Connexion
+  </button>
+
+</ion-content>

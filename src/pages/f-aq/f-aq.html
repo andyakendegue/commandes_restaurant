@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons left>
+        <button ion-button icon-only (click)="openMenu('main')">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>
+      FAQ
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="openMenu('user')">
+            <ion-icon name="apps"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding id="page4">
+  <ion-list>
+  <ion-item *ngFor="let d of posts; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+    <h3>
+      {{d.question}}
+      <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+    </h3>
+    <div *ngIf="isGroupShown(i)">{{d.reponse}}</div>
+  </ion-item>
+</ion-list>
+  </ion-content>

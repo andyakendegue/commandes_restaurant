@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons left>
+        <button ion-button icon-only (click)="openMenu('main')">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>
+      Parametres
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="openMenu('user')">
+            <ion-icon name="apps"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding id="page8">
+  <ion-list>
+    <ion-list-header>
+      Notifications
+    </ion-list-header>
+    <ion-label> Activer les notifications</ion-label>
+    <ion-toggle checked="false"></ion-toggle>
+    <ion-list-header>
+      Commandes
+    </ion-list-header>
+
+    <ion-label> Enregistrer les commandes</ion-label>
+    <ion-toggle checked="false"></ion-toggle>
+
+    <ion-list-header>
+      Localisation
+    </ion-list-header>
+    <ion-label> Partager ma position avec l'application</ion-label>
+    <ion-toggle checked="false"></ion-toggle>
+  </ion-list>
+</ion-content>

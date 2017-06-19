@@ -1,0 +1,57 @@
+<!--
+  Generated template for the ContactPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons left>
+        <button ion-button icon-only (click)="openMenu('main')">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>
+      Laissez-nous un message
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="openMenu('user')">
+            <ion-icon name="apps"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <form id="connexion-form1" (submit)="sendMessage()">
+    <div class="spacer" style="height:20px;" id="connexion-spacer2"></div>
+    <h1 id="connexion-heading1" style="color:#000000;text-align:center;">
+      Besoin d'aide ?
+    </h1>
+    <div class="spacer" style="height:30px;" id="connexion-spacer3"></div>
+    <div id="connexion-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Écrivez-nous un message et nous vous répondrons dès que possible.
+      </p>
+    </div>
+    <div class="spacer" style="height:30px;" id="connexion-spacer4"></div>
+    <ion-list id="connexion-list1">
+
+      <ion-item id="connexion-input2">
+        <ion-label>
+          Votre message
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="messageData.message" name="message"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="spacer" style="height:40px;" id="connexion-spacer1"></div>
+    <button id="connexion-button1" ion-button color="stable" block type="submit">
+      Envoyer
+    </button>
+
+  </form>
+
+</ion-content>
